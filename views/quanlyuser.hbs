@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color: #FAFAFA;">
+<div class="super_container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <!-- Main Navigation -->
+
+        <div class="deals_featured">
+            <div class="container">
+                <div class="row">
+                    <div class="list-group my-2">
+                        <img style="width:160px; height:70px" src="https://fpt.edu.vn/Content/images/assets/Poly.png"
+                             alt="image" class="rounded mx-auto d-block">
+                        <p style="text-align: center; font-size:30px; font-weight: bold;">E-commerce</p>
+                        <a href="/quanlysanpham" class="list-group-item list-group-item-action">Quản Lý Sản Phẩm</a>
+                        <a href="/formsanpham" class="list-group-item list-group-item-action">Thêm Sản Phẩm</a>
+                        <a href="/quanlyuser" class="list-group-item list-group-item-action">Quản Lý Tài Khoản</a>
+                    </div>
+
+                    <table id="mytable" class="display cell-border table table-striped table-borderless container-fluid"
+                           style="width: 80%" cellspacing="0">
+                        <thead>
+                        <tr class="border-bottom">
+                            <th></th>
+                            <th scope="col">Tên Người Dùng</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Mật Khẩu</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{# each watchList}}
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <p class=" data">{{name}}</p>
+                                </td>
+                                <td>
+                                    <p class=" data">{{email}}</p>
+                                </td>
+                                <td>
+                                    <p class=" data">{{password}}</p>
+                                </td>
+                                <td style="text-align:center">
+                                    <a href="/edit/{{_id}}" class="btnEdit">Sửa</a>
+                                    <a href="/delete/{{_id}}" class="btnDelete"
+                                       onclick="return confirm('Are you sure to delete this song?')">Xóa</a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                        </tbody>
+                        <hr/>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
